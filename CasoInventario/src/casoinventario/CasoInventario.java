@@ -30,7 +30,7 @@ public class CasoInventario {
         int categoria_del_producto = scanner.nextInt();
 
 
-    // Calculamos el inicial del monto total
+        // Calculamos el inicial del monto total
         double monto_total = inventario * precio_producto;
 
         // Salida de datos inicial
@@ -72,7 +72,9 @@ public class CasoInventario {
         if (monto_total > 500) {
             System.out.println("Atención: Se recomienda reducir el inventario ya que el valor total supera los 500 soles.");
         }
-        scanner.close(); 
-    }
+        
+        scanner.close(); // Cierre correcto del scanner
+    }
 }
+
     
