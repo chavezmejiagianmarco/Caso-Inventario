@@ -29,4 +29,25 @@ public class CasoInventario {
         System.out.println("3: Ropa");
         int categoria_del_producto = scanner.nextInt();
 
+
+    // Calculamos el inicial del monto total
+        double monto_total = inventario * precio_producto;
+
+        // Salida de datos inicial
+        System.out.println("\nResumen del inventario");
+        System.out.println("Producto: " + nombre_producto);
+        System.out.println("Cantidad: " + inventario);
+        System.out.println("Precio unitario del producto: " + precio_producto);
+        System.out.println("Monto total antes de los descuentos: " + monto_total);
+
+        // Hacemos la aplicación de descuentos
+        if (inventario > 100) {
+            monto_total *= 0.8; // Descuento del 20%
+            System.out.println("Se aplicó un descuento del 20%");
+        } else if (inventario > 50) {
+            monto_total *= 0.9; // Descuento del 10%
+            System.out.println("Se aplicó un descuento del 10%");
+        } else {
+            System.out.println("No cumple con los requisitos para el descuento");
+        }
         
