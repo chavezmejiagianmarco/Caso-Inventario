@@ -51,3 +51,28 @@ public class CasoInventario {
             System.out.println("No cumple con los requisitos para el descuento");
         }
         
+        // Clasificamos los productos
+        switch (categoria_del_producto) {
+            case 1:
+                System.out.println("Producto electrónico. Revisar garantía.");
+                break;
+            case 2:
+                System.out.println("Producto alimenticio. Revisar fecha de caducidad.");
+                break;
+            case 3:
+                System.out.println("Producto de ropa. Revisar tallas disponibles.");
+                break;
+            default:
+                System.out.println("Categoría no válida.");
+                break;
+        }
+
+        // Salida de datos final
+        System.out.println("Precio final: " + monto_total);
+        if (monto_total > 500) {
+            System.out.println("Atención: Se recomienda reducir el inventario ya que el valor total supera los 500 soles.");
+        }
+        scanner.close(); 
+    }
+}
+    
